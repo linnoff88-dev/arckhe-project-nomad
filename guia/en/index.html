@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project NOMAD — the world's knowledge stays with you, even offline</title>
+<meta name="description" content="Project NOMAD: an offline server with Wikipedia, courses, maps and local AI on your own computer. Guide in English.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/project-nomad/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/project-nomad/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/project-nomad/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;height:auto;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  .techhead{background:var(--bg2);border-top:3px solid var(--amb);padding:46px 0 10px;border-bottom:1px solid var(--line)}
+  .techhead h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;margin:.3em 0 .4em}
+  .techzone{background:var(--bg2)}
+  .techzone section{border-bottom:1px solid var(--line)}
+  .vid{padding:0}
+  .credit{font-size:.9rem;color:var(--mut)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🧭</span> Project NOMAD</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">What it does</a>
+    <a class="sec" href="#tecnico">Kit (technical)</a>
+    <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+    <a class="btn" href="https://github.com/inematds/project-nomad" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">No internet, still knowledge</span>
+      <h1>With no internet, the world's knowledge <span class="amb">stays with you</span></h1>
+      <p class="lead">What if the internet goes down? Project NOMAD keeps on your computer (Linux, or Windows via WSL2) a library, courses, maps and local AI that work offline.</p>
+      <div class="cta">
+        <a class="btn" href="#oque">Understand in 5 minutes</a>
+        <a class="btn ghost" href="https://github.com/inematds/project-nomad" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-en.jpg" alt="Project NOMAD: Wikipedia, courses, maps and local AI offline"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">In short</span>
+  <p>What if the internet goes down, or you are somewhere it never reaches? Project NOMAD is a knowledge and education server that runs on your own computer and works without internet. You install it on Linux (Debian or Ubuntu) and open it in the browser: offline Wikipedia and ebooks, Khan Academy courses, maps, a local AI chat, notes and data tools. You only need internet to install it and to download the content you want to keep. It is an open project by Crosstalk Solutions (Apache 2.0 license).</p>
+  <figure style="margin:22px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="What Project NOMAD delivers: offline library, courses, maps, local AI, notes and tools" loading="lazy" style="width:100%;display:block"></figure>
+</div></section>
+
+<!-- VIDEO: entra o explicavideo do projeto quando publicado -->
+
+<section id="oque"><div class="wrap">
+  <span class="chip">What it does</span>
+  <h2>A library, a school and a map on your own hardware</h2>
+  <p class="sub">NOMAD is a dashboard (the “Command Center”) that installs and looks after several open tools for you, all reached from the browser.</p>
+  <div class="grid g3">
+    <div class="card"><h3>📚 Offline library</h3><p>Wikipedia, medical references, guides and ebooks, with Kiwix.</p></div>
+    <div class="card"><h3>🎓 Courses</h3><p>Khan Academy courses with progress tracking and multiple users, with Kolibri.</p></div>
+    <div class="card"><h3>🗺️ Maps</h3><p>Regional maps you download and browse without a connection, with ProtoMaps.</p></div>
+    <div class="card"><h3>🤖 Local AI</h3><p>An AI chat running on your own device (Ollama), with document upload and semantic search (Qdrant).</p></div>
+    <div class="card"><h3>📝 Notes and tools</h3><p>Markdown notes (FlatNotes) and data tools such as encryption and encoding (CyberChef).</p></div>
+    <div class="card"><h3>🧰 App catalog</h3><p>The “Supply Depot”: a one-click app catalog plus the option to run your own Docker containers.</p></div>
+  </div>
+  <p class="credit" style="margin-top:26px">This guide is an English adaptation of <a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank" rel="noopener">Project NOMAD</a>, by Crosstalk Solutions (Apache 2.0 license). Official site: <a href="https://www.projectnomad.us/" target="_blank" rel="noopener">projectnomad.us</a>. The code and trademarks belong to their authors; this fork exists for study and outreach only.</p>
+</div></section>
+
+<div id="tecnico" class="techhead"><div class="wrap">
+  <span class="chip">Technical part</span>
+  <h2>The kit: for those who want to install NOMAD</h2>
+  <p class="mut">You do not need this part to understand what is above.</p>
+</div></div>
+
+<div class="techzone">
+
+<section id="fluxo"><div class="wrap">
+  <span class="chip">How it works</span>
+  <h2>How it works</h2>
+  <p class="sub">NOMAD is a management UI and an API that organize, through Docker, a set of tools and content. It handles installation, configuration and updates.</p>
+  <div class="flow"><span>Install (1 command)</span><span class="arr">→</span><span>Open in the browser</span><span class="arr">→</span><span>Setup wizard</span><span class="arr">→</span><span>Download content</span><span class="arr">→</span><span>Use offline</span></div>
+</div></section>
+
+<section id="pre"><div class="wrap">
+  <span class="chip">What you need</span>
+  <h2>What you need</h2>
+  <p class="sub">NOMAD itself is light; what you choose to install sets the size. The AI is what weighs the most.</p>
+  <div class="grid g3">
+    <div class="card"><h3>Minimum (panel only)</h3><p>2 GHz dual-core processor, 4 GB of RAM (the whole stack without AI runs in under 1 GB) and at least 5 GB free (10 GB to be comfortable). Debian-based OS (Ubuntu 26.04 LTS recommended; 24.04 LTS and Debian 12 also supported).</p></div>
+    <div class="card"><h3>Optimal (with AI)</h3><p>Ryzen 7 or Core i7, 32 GB of RAM, an NVIDIA RTX 3060 or equivalent graphics card and 250 GB free, preferably on SSD. The AI assistant alone brings the install to about 25 GB.</p></div>
+    <div class="card"><h3>Access and network</h3><p>Administrator permission (sudo) to install and a stable internet connection during installation. On Windows, the path is WSL2 (a Linux inside Windows), maintained by the community: <a href='https://www.projectnomad.us/install/wsl2' target='_blank' rel='noopener'>WSL2 install guide</a>. How much space each content takes is in the <a href='https://github.com/Crosstalk-Solutions/project-nomad/blob/main/FAQ.md' target='_blank' rel='noopener'>official FAQ</a>.</p></div>
+  </div>
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">Step by step</span>
+  <h2>Step by step</h2>
+  <p class="sub">The commands below come from the project's official README.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Install (Debian or Ubuntu)</h3>
+    <p>Open a terminal on Linux and paste the block below (it downloads and runs the installer; it needs sudo). Step by step with Ubuntu: <a href="https://www.projectnomad.us/install" target="_blank" rel="noopener">install guide</a>.</p>
+<pre>sudo apt-get update &amp;&amp; \
+sudo apt-get install -y curl &amp;&amp; \
+curl -fsSL https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/refs/heads/main/install/install_nomad.sh \
+  -o install_nomad.sh &amp;&amp; \
+sudo bash install_nomad.sh</pre>
+  </div></div>
+  <div class="step"><div class="b">2</div><div>
+    <h3>Open it in the browser</h3>
+    <p>When the install ends, open it on the same computer (localhost) or, from another device on your network, by the IP address of the computer where you installed it.</p>
+<pre>http://localhost:8080          <span class="c"># or http://DEVICE_IP:8080</span></pre>
+  </div></div>
+  <div class="step"><div class="b">3</div><div>
+    <h3>Follow the wizard</h3>
+    <p>The first time, a wizard guides the setup and suggests ready-made content collections. Choose the collections to download (Wikipedia, courses, maps). The AI is a separate app you add afterwards.</p>
+  </div></div>
+  <div class="step"><div class="b">4</div><div>
+    <h3>Run the AI on another machine (optional)</h3>
+    <p>By default the installer puts Ollama on the same device. To use another one, enter its address in the AI assistant settings (the NOMAD AI screen, not the setup wizard). On the Ollama of that other device, set this environment variable when starting it (setting up that other server is on you):</p>
+<pre>OLLAMA_HOST=0.0.0.0</pre>
+  </div></div>
+  <div class="step"><div class="b">5</div><div>
+    <h3>Day-to-day care</h3>
+    <p>Once installed, there are maintenance scripts in the project folder.</p>
+<pre>sudo bash /opt/project-nomad/start_nomad.sh    <span class="c"># starts the containers</span>
+sudo bash /opt/project-nomad/stop_nomad.sh     <span class="c"># stops the containers</span>
+sudo bash /opt/project-nomad/update_nomad.sh   <span class="c"># updates the Command Center</span></pre>
+  </div></div>
+</div></section>
+
+<section id="seguranca"><div class="wrap">
+  <span class="chip">Privacy and security</span>
+  <h2>Privacy and security</h2>
+  <p class="sub">What the project says about it:</p>
+  <div class="grid g2">
+    <div class="card"><h3>Internet</h3><p>Only needed for installation and when you yourself download new content.</p></div>
+    <div class="card"><h3>No login</h3><p>NOMAD has no authentication: it was designed to be open. If you connect the device to a local network, control access at the network level and do not expose it directly to the internet.</p></div>
+  </div>
+</div></section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Docker</div><div class="pill">Ollama</div><div class="pill">Kiwix</div><div class="pill">Kolibri</div>
+    <p style="margin-top:18px">Fork of Project NOMAD (Crosstalk Solutions) · Apache 2.0 ·
+      <a href="https://github.com/inematds/project-nomad">inematds/project-nomad</a> ·
+      <a href="https://github.com/Crosstalk-Solutions/project-nomad">Crosstalk-Solutions/project-nomad</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='project-nomad-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>
