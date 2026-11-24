@@ -75,7 +75,7 @@ export default function BenchmarkPage(props: {
   })
 
   // Fetch all benchmark results for history
-  const { data: benchmarkHistory } = useQuery({
+  const { data: benchmARCKHistory } = useQuery({
     queryKey: ['benchmark', 'history'],
     queryFn: async () => {
       const res = await api.getBenchmarkResults()
@@ -880,7 +880,7 @@ export default function BenchmarkPage(props: {
               </section>
 
               {/* Benchmark History */}
-              {benchmarkHistory && benchmarkHistory.length > 1 && (
+              {benchmARCKHistory && benchmARCKHistory.length > 1 && (
                 <section className="mb-12">
                   <h2 className="text-2xl font-bold text-desert-green mb-6 flex items-center gap-2">
                     <div className="w-1 h-6 bg-desert-green" />
@@ -895,8 +895,8 @@ export default function BenchmarkPage(props: {
                       <div className="flex items-center gap-2">
                         <IconClock className="w-5 h-5 text-desert-stone-dark" />
                         <span className="font-medium text-desert-green">
-                          {benchmarkHistory.length} benchmark
-                          {benchmarkHistory.length !== 1 ? 's' : ''} recorded
+                          {benchmARCKHistory.length} benchmark
+                          {benchmARCKHistory.length !== 1 ? 's' : ''} recorded
                         </span>
                       </div>
                       <IconChevronDown
@@ -928,7 +928,7 @@ export default function BenchmarkPage(props: {
                               </tr>
                             </thead>
                             <tbody className="divide-y divide-desert-stone-lighter">
-                              {benchmarkHistory.map((result) => (
+                              {benchmARCKHistory.map((result) => (
                                 <tr
                                   key={result.benchmark_id}
                                   className={`hover:bg-desert-stone-lighter/30 ${
