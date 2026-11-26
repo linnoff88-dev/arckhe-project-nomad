@@ -144,7 +144,7 @@
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">Em resumo</span>
-  <p>E se a internet cair, ou você estiver onde ela não chega? O Project NOMAD é um servidor de conhecimento e educação que roda no seu próprio computador e funciona sem internet. Você instala num Linux (Debian ou Ubuntu) e abre pelo navegador: Wikipédia e livros offline, cursos da Khan Academy, mapas, um chat com IA local, notas e ferramentas de dados. Precisa de internet só para instalar e para baixar o conteúdo que quiser guardar. É um projeto aberto da Crosstalk Solutions (licença Apache 2.0).</p>
+  <p>E se a internet cair, ou você estiver onde ela nêo chega? O Project NOMAD é um servidor de conhecimento e educaçêo que roda no seu próprio computador e funciona sem internet. Você instala num Linux (Debian ou Ubuntu) e abre pelo navegador: Wikipédia e livros offline, cursos da Khan Academy, mapas, um chat com IA local, notas e ferramentas de dados. Precisa de internet só para instalar e para baixar o conteúdo que quiser guardar. É um projeto aberto da Crosstalk Solutions (licença Apache 2.0).</p>
   <figure style="margin:22px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="O que o Project NOMAD entrega: biblioteca offline, cursos, mapas, IA local, notas e ferramentas" loading="lazy" style="width:100%;display:block"></figure>
 </div></section>
 
@@ -157,18 +157,18 @@
   <div class="grid g3">
     <div class="card"><h3>📚 Biblioteca offline</h3><p>Wikipédia, referências médicas, guias e livros, com o Kiwix.</p></div>
     <div class="card"><h3>🎓 Cursos</h3><p>Cursos da Khan Academy com acompanhamento de progresso e vários usuários, com o Kolibri.</p></div>
-    <div class="card"><h3>🗺️ Mapas</h3><p>Mapas regionais para baixar e consultar sem conexão, com o ProtoMaps.</p></div>
+    <div class="card"><h3>🗺️ Mapas</h3><p>Mapas regionais para baixar e consultar sem conexêo, com o ProtoMaps.</p></div>
     <div class="card"><h3>🤖 IA local</h3><p>Chat com IA rodando no seu equipamento (Ollama), com envio de documentos e busca por significado (Qdrant).</p></div>
-    <div class="card"><h3>📝 Notas e ferramentas</h3><p>Anotações em markdown (FlatNotes) e ferramentas de dados como criptografia e codificação (CyberChef).</p></div>
-    <div class="card"><h3>🧰 Catálogo de apps</h3><p>A “Supply Depot”: um catálogo de apps em um clique e a opção de rodar seus próprios containers Docker.</p></div>
+    <div class="card"><h3>📝 Notas e ferramentas</h3><p>Anotações em markdown (FlatNotes) e ferramentas de dados como criptografia e codificaçêo (CyberChef).</p></div>
+    <div class="card"><h3>🧰 Catálogo de apps</h3><p>A “Supply Depot”: um catálogo de apps em um clique e a opçêo de rodar seus próprios containers Docker.</p></div>
   </div>
-  <p class="credit" style="margin-top:26px">Este guia é uma adaptação em português do projeto <a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank" rel="noopener">Project NOMAD</a>, da Crosstalk Solutions (licença Apache 2.0). Site oficial: <a href="https://www.projectnomad.us/" target="_blank" rel="noopener">projectnomad.us</a>. O código e as marcas pertencem aos autores; este fork em português serve só para estudo e divulgação.</p>
+  <p class="credit" style="margin-top:26px">Este guia é uma adaptaçêo em português do projeto <a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank" rel="noopener">Project NOMAD</a>, da Crosstalk Solutions (licença Apache 2.0). Site oficial: <a href="https://www.projectnomad.us/" target="_blank" rel="noopener">projectnomad.us</a>. O código e as marcas pertencem aos autores; este fork em português serve só para estudo e divulgaçêo.</p>
 </div></section>
 
 <div id="tecnico" class="techhead"><div class="wrap">
   <span class="chip">Parte técnica</span>
   <h2>O kit: para quem quer instalar o NOMAD</h2>
-  <p class="mut">Você não precisa desta parte para entender o que está acima.</p>
+  <p class="mut">Você nêo precisa desta parte para entender o que está acima.</p>
 </div></div>
 
 <div class="techzone">
@@ -176,8 +176,8 @@
 <section id="fluxo"><div class="wrap">
   <span class="chip">Como funciona</span>
   <h2>Como funciona</h2>
-  <p class="sub">O NOMAD é uma interface de gerenciamento e uma API que organizam, via Docker, um conjunto de ferramentas e conteúdos. Ele cuida da instalação, da configuração e das atualizações.</p>
-  <div class="flow"><span>Instalar (1 comando)</span><span class="arr">→</span><span>Abrir no navegador</span><span class="arr">→</span><span>Assistente de configuração</span><span class="arr">→</span><span>Baixar conteúdo</span><span class="arr">→</span><span>Usar offline</span></div>
+  <p class="sub">O NOMAD é uma interface de gerenciamento e uma API que organizam, via Docker, um conjunto de ferramentas e conteúdos. Ele cuida da instalaçêo, da configuraçêo e das atualizações.</p>
+  <div class="flow"><span>Instalar (1 comando)</span><span class="arr">→</span><span>Abrir no navegador</span><span class="arr">→</span><span>Assistente de configuraçêo</span><span class="arr">→</span><span>Baixar conteúdo</span><span class="arr">→</span><span>Usar offline</span></div>
 </div></section>
 
 <section id="pre"><div class="wrap">
@@ -186,8 +186,8 @@
   <p class="sub">O NOMAD em si é leve; o que você escolhe instalar define o tamanho. A IA é o que mais pesa.</p>
   <div class="grid g3">
     <div class="card"><h3>Mínimo (só o painel)</h3><p>Processador de 2 GHz com 2 núcleos, 4 GB de RAM (a pilha toda sem IA roda em menos de 1 GB) e pelo menos 5 GB livres (10 GB para ficar confortável). Sistema Debian ou Ubuntu (recomendado: Ubuntu 26.04 LTS; também 24.04 LTS e Debian 12).</p></div>
-    <div class="card"><h3>Ideal (com IA)</h3><p>Ryzen 7 ou Core i7, 32 GB de RAM, placa de vídeo NVIDIA RTX 3060 ou equivalente e 250 GB livres, de preferência em SSD. Só o assistente de IA leva a instalação a cerca de 25 GB.</p></div>
-    <div class="card"><h3>Acesso e rede</h3><p>Permissão de administrador (sudo) para instalar e internet estável durante a instalação. No Windows, o caminho é pelo WSL2 (um Linux dentro do Windows), mantido pela comunidade: <a href='https://www.projectnomad.us/install/wsl2' target='_blank' rel='noopener'>guia de instalação no WSL2</a>. Quanto espaço cada conteúdo ocupa está no <a href='https://github.com/Crosstalk-Solutions/project-nomad/blob/main/FAQ.md' target='_blank' rel='noopener'>FAQ oficial</a>.</p></div>
+    <div class="card"><h3>Ideal (com IA)</h3><p>Ryzen 7 ou Core i7, 32 GB de RAM, placa de vídeo NVIDIA RTX 3060 ou equivalente e 250 GB livres, de preferência em SSD. Só o assistente de IA leva a instalaçêo a cerca de 25 GB.</p></div>
+    <div class="card"><h3>Acesso e rede</h3><p>Permissêo de administrador (sudo) para instalar e internet estável durante a instalaçêo. No Windows, o caminho é pelo WSL2 (um Linux dentro do Windows), mantido pela comunidade: <a href='https://www.projectnomad.us/install/wsl2' target='_blank' rel='noopener'>guia de instalaçêo no WSL2</a>. Quanto espaço cada conteúdo ocupa está no <a href='https://github.com/Crosstalk-Solutions/project-nomad/blob/main/FAQ.md' target='_blank' rel='noopener'>FAQ oficial</a>.</p></div>
   </div>
 </div></section>
 
@@ -198,7 +198,7 @@
 
   <div class="step"><div class="b">1</div><div>
     <h3>Instale (Debian ou Ubuntu)</h3>
-    <p>Abra um terminal no Linux e cole o bloco abaixo (ele baixa e roda o instalador; precisa de sudo). Passo a passo com Ubuntu: <a href="https://www.projectnomad.us/install" target="_blank" rel="noopener">guia de instalação</a>.</p>
+    <p>Abra um terminal no Linux e cole o bloco abaixo (ele baixa e roda o instalador; precisa de sudo). Passo a passo com Ubuntu: <a href="https://www.projectnomad.us/install" target="_blank" rel="noopener">guia de instalaçêo</a>.</p>
 <pre>sudo apt-get update &amp;&amp; \
 sudo apt-get install -y curl &amp;&amp; \
 curl -fsSL https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/refs/heads/main/install/install_nomad.sh \
@@ -207,21 +207,21 @@ sudo bash install_nomad.sh</pre>
   </div></div>
   <div class="step"><div class="b">2</div><div>
     <h3>Abra no navegador</h3>
-    <p>Terminada a instalação, entre pelo próprio computador (localhost) ou, de outro aparelho da rede, pelo endereço IP do computador onde instalou.</p>
+    <p>Terminada a instalaçêo, entre pelo próprio computador (localhost) ou, de outro aparelho da rede, pelo endereço IP do computador onde instalou.</p>
 <pre>http://localhost:8080          <span class="c"># ou http://IP_DO_APARELHO:8080</span></pre>
   </div></div>
   <div class="step"><div class="b">3</div><div>
     <h3>Siga o assistente</h3>
-    <p>Na primeira vez, um assistente guia a configuração e sugere coleções de conteúdo prontas. Escolha as coleções que quer baixar (Wikipédia, cursos, mapas). A IA é um app à parte, que você adiciona depois.</p>
+    <p>Na primeira vez, um assistente guia a configuraçêo e sugere coleções de conteúdo prontas. Escolha as coleções que quer baixar (Wikipédia, cursos, mapas). A IA é um app à parte, que você adiciona depois.</p>
   </div></div>
   <div class="step"><div class="b">4</div><div>
     <h3>Rode a IA em outra máquina (opcional)</h3>
-    <p>Por padrão o instalador põe o Ollama no mesmo aparelho. Para usar outro, informe o endereço dele nas configurações do assistente de IA (a tela de IA do NOMAD, não o assistente de configuração). No Ollama desse outro aparelho, defina esta variável de ambiente ao iniciá-lo (a configuração desse outro servidor fica por sua conta):</p>
+    <p>Por padrêo o instalador põe o Ollama no mesmo aparelho. Para usar outro, informe o endereço dele nas configurações do assistente de IA (a tela de IA do NOMAD, nêo o assistente de configuraçêo). No Ollama desse outro aparelho, defina esta variável de ambiente ao iniciá-lo (a configuraçêo desse outro servidor fica por sua conta):</p>
 <pre>OLLAMA_HOST=0.0.0.0</pre>
   </div></div>
   <div class="step"><div class="b">5</div><div>
     <h3>Cuide do dia a dia</h3>
-    <p>Depois de instalado, há scripts de manutenção na pasta do projeto.</p>
+    <p>Depois de instalado, há scripts de manutençêo na pasta do projeto.</p>
 <pre>sudo bash /opt/project-nomad/start_nomad.sh    <span class="c"># inicia os containers</span>
 sudo bash /opt/project-nomad/stop_nomad.sh     <span class="c"># para os containers</span>
 sudo bash /opt/project-nomad/update_nomad.sh   <span class="c"># atualiza o Command Center</span></pre>
@@ -233,8 +233,8 @@ sudo bash /opt/project-nomad/update_nomad.sh   <span class="c"># atualiza o Comm
   <h2>Privacidade e segurança</h2>
   <p class="sub">O que o projeto diz sobre isso:</p>
   <div class="grid g2">
-    <div class="card"><h3>Internet</h3><p>Só é necessária na instalação e quando você mesmo baixar conteúdo novo.</p></div>
-    <div class="card"><h3>Sem login</h3><p>O NOMAD não tem autenticação: foi feito para ser aberto. Se for ligar o aparelho numa rede local, controle o acesso pela rede e não o exponha direto à internet.</p></div>
+    <div class="card"><h3>Internet</h3><p>Só é necessária na instalaçêo e quando você mesmo baixar conteúdo novo.</p></div>
+    <div class="card"><h3>Sem login</h3><p>O NOMAD nêo tem autenticaçêo: foi feito para ser aberto. Se for ligar o aparelho numa rede local, controle o acesso pela rede e nêo o exponha direto à internet.</p></div>
   </div>
 </div></section>
 

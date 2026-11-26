@@ -1,4 +1,4 @@
-﻿<div align="center">
+ï»¿<div align="center">
 <img src="admin/public/nomad-primary.svg" width="200" alt="Project NOMAD"/>
 
 # Project NOMAD
@@ -10,25 +10,25 @@
 
 </div>
 
-[![Project NOMAD: o conhecimento do mundo continua com vocÃª](guia/assets/banner.jpg)](https://inematds.github.io/project-nomad/guia/)
+[![Project NOMAD: o conhecimento do mundo continua com vocêÂª](guia/assets/banner.jpg)](https://inematds.github.io/project-nomad/guia/)
 
-**ðŸ‡§ðŸ‡· [PortuguÃªs](README.md) Â· ðŸ‡ºðŸ‡¸ [English](README.en.md) Â· ðŸ‡ªðŸ‡¸ [EspaÃ±ol](README.es.md)**
+**ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
-> Fork da INEMA do [Project NOMAD](https://github.com/Crosstalk-Solutions/project-nomad), da Crosstalk Solutions (Apache 2.0). O cÃ³digo nÃ£o foi alterado; o guia em portuguÃªs/inglÃªs/espanhol estÃ¡ em `guia/`. O README original, em inglÃªs, continua logo abaixo.
+> Fork da INEMA do [Project NOMAD](https://github.com/Crosstalk-Solutions/project-nomad), da Crosstalk Solutions (Apache 2.0). O cêÂ³digo nêÂ£o foi alterado; o guia em portuguêÂªs/inglêÂªs/espanhol estêÂ¡ em `guia/`. O README original, em inglêÂªs, continua logo abaixo.
 
-## O que Ã©
+## O que êÂ©
 
-E se a internet cair, ou vocÃª estiver onde ela nÃ£o chega? O Project NOMAD Ã© um servidor de conhecimento e educaÃ§Ã£o que roda no seu prÃ³prio computador e funciona sem internet. VocÃª instala num Linux (Debian ou Ubuntu) e abre pelo navegador: WikipÃ©dia e livros offline, cursos da Khan Academy, mapas, um chat com IA local, notas e ferramentas de dados. Precisa de internet sÃ³ para instalar e para baixar o conteÃºdo que quiser guardar.
+E se a internet cair, ou vocêÂª estiver onde ela nêÂ£o chega? O Project NOMAD êÂ© um servidor de conhecimento e educaêÂ§êÂ£o que roda no seu prêÂ³prio computador e funciona sem internet. VocêÂª instala num Linux (Debian ou Ubuntu) e abre pelo navegador: WikipêÂ©dia e livros offline, cursos da Khan Academy, mapas, um chat com IA local, notas e ferramentas de dados. Precisa de internet sêÂ³ para instalar e para baixar o conteêÂºdo que quiser guardar.
 
-## ðŸ“– Guia de uso
+## ê°Å¸ââ Guia de uso
 
 Guia completo (resumo + passo a passo): **https://inematds.github.io/project-nomad/guia/**
 
-ðŸŽ¬ VÃ­deo: em breve.
+ê°Å¸Å½Â¬ VêÂ­deo: em breve.
 
 ---
 
-Project NOMAD is a self-contained, offline-first knowledge and education server packed with critical tools, knowledge, and AI to keep you informed and empowered â€” anytime, anywhere.
+Project NOMAD is a self-contained, offline-first knowledge and education server packed with critical tools, knowledge, and AI to keep you informed and empowered ê¢â¬â anytime, anywhere.
 
 ## Installation & Quickstart
 Project NOMAD can be installed on any Debian-based operating system (we recommend Ubuntu 26.04 LTS; 24.04 LTS and Debian 12 are also supported). Installation is completely terminal-based, and all tools and resources are designed to be accessed through the browser, so there's no need for a desktop environment if you'd rather setup NOMAD as a "server" and access it through other clients.
@@ -48,25 +48,25 @@ sudo bash install_nomad.sh
 
 Project NOMAD is now installed on your device! Open a browser and navigate to `http://localhost:8080` (or `http://DEVICE_IP:8080`) to start exploring!
 
-For a complete step-by-step walkthrough (including Ubuntu installation), see the [Installation Guide](https://www.projectnomad.us/install). For Windows users, see the [WSL2 install guide](https://www.projectnomad.us/install/wsl2) â€” community-supported path covering native Docker and Docker Desktop install routes.
+For a complete step-by-step walkthrough (including Ubuntu installation), see the [Installation Guide](https://www.projectnomad.us/install). For Windows users, see the [WSL2 install guide](https://www.projectnomad.us/install/wsl2) ê¢â¬â community-supported path covering native Docker and Docker Desktop install routes.
 
 ### Advanced Installation
 For more control over the installation process, copy and paste the [Docker Compose template](https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/refs/heads/main/install/management_compose.yaml) into a `docker-compose.yml` file and customize it to your liking (be sure to replace any placeholders with your actual values). Then, run `docker compose up -d` to start the Command Center and its dependencies. Note: this method is recommended for advanced users only, as it requires familiarity with Docker and manual configuration before starting.
 
 ## How It Works
-NOMAD is a management UI ("Command Center") and API that orchestrates a collection of containerized tools and resources via [Docker](https://www.docker.com/). It handles installation, configuration, and updates for everything â€” so you don't have to.
+NOMAD is a management UI ("Command Center") and API that orchestrates a collection of containerized tools and resources via [Docker](https://www.docker.com/). It handles installation, configuration, and updates for everything ê¢â¬â so you don't have to.
 
 **Built-in capabilities include:**
-- **AI Chat with Knowledge Base** â€” local AI chat powered by [Ollama](https://ollama.com/) or you can use OpenAI API compatible software such as LM Studio or llama.cpp, with document upload and semantic search (RAG via [Qdrant](https://qdrant.tech/))
-- **Information Library** â€” offline Wikipedia, medical references, ebooks, and more via [Kiwix](https://kiwix.org/)
-- **Education Platform** â€” Khan Academy courses with progress tracking via [Kolibri](https://learningequality.org/kolibri/)
-- **Offline Maps** â€” downloadable regional maps via [ProtoMaps](https://protomaps.com)
-- **Data Tools** â€” encryption, encoding, and analysis via [CyberChef](https://gchq.github.io/CyberChef/)
-- **Notes** â€” local note-taking via [FlatNotes](https://github.com/dullage/flatnotes)
-- **System Benchmark** â€” hardware scoring with a [community leaderboard](https://benchmark.projectnomad.us)
-- **Supply Depot** â€” a one-click app catalog (PDF tools, file browser, e-book library, password manager, and more) plus the ability to run your own custom Docker containers
-- **Automatic Updates** â€” opt-in, hands-off updates for the core software, installed apps, and offline content, on a schedule you control
-- **Easy Setup Wizard** â€” guided first-time configuration with curated content collections
+- **AI Chat with Knowledge Base** ê¢â¬â local AI chat powered by [Ollama](https://ollama.com/) or you can use OpenAI API compatible software such as LM Studio or llama.cpp, with document upload and semantic search (RAG via [Qdrant](https://qdrant.tech/))
+- **Information Library** ê¢â¬â offline Wikipedia, medical references, ebooks, and more via [Kiwix](https://kiwix.org/)
+- **Education Platform** ê¢â¬â Khan Academy courses with progress tracking via [Kolibri](https://learningequality.org/kolibri/)
+- **Offline Maps** ê¢â¬â downloadable regional maps via [ProtoMaps](https://protomaps.com)
+- **Data Tools** ê¢â¬â encryption, encoding, and analysis via [CyberChef](https://gchq.github.io/CyberChef/)
+- **Notes** ê¢â¬â local note-taking via [FlatNotes](https://github.com/dullage/flatnotes)
+- **System Benchmark** ê¢â¬â hardware scoring with a [community leaderboard](https://benchmark.projectnomad.us)
+- **Supply Depot** ê¢â¬â a one-click app catalog (PDF tools, file browser, e-book library, password manager, and more) plus the ability to run your own custom Docker containers
+- **Automatic Updates** ê¢â¬â opt-in, hands-off updates for the core software, installed apps, and offline content, on a schedule you control
+- **Easy Setup Wizard** ê¢â¬â guided first-time configuration with curated content collections
 
 NOMAD also includes built-in tools like a Wikipedia content selector, ZIM library manager, and content explorer.
 
@@ -110,9 +110,9 @@ To run LLMs and other included AI tools:
 - OS: Debian-based (Ubuntu 26.04 LTS recommended)
 - Stable internet connection (required during install only)
 
-**For detailed build recommendations at three price points ($150â€“$1,000+), see the [Hardware Guide](https://www.projectnomad.us/hardware).**
+**For detailed build recommendations at three price points ($150ê¢â¬â$1,000+), see the [Hardware Guide](https://www.projectnomad.us/hardware).**
 
-Again, Project NOMAD itself is quite lightweight â€” it's the tools and resources you choose to install with NOMAD that will determine the specs required for your unique deployment
+Again, Project NOMAD itself is quite lightweight ê¢â¬â it's the tools and resources you choose to install with NOMAD that will determine the specs required for your unique deployment
 
 #### Running AI models on a different host
 By default, NOMAD's installer will attempt to setup Ollama on the host when the AI Assistant is installed. However, if you would like to run the AI model on a different host, you can go to the settings of the AI assistant and input a URL for either an ollama or OpenAI-compatible API server (such as LM Studio).  
@@ -128,10 +128,10 @@ Project NOMAD is designed for offline usage. An internet connection is only requ
 
 To test internet connectivity, NOMAD first attempts to make a request to Cloudflare's utility endpoint, `https://1.1.1.1/cdn-cgi/trace`. If that endpoint is unreachable (for example, because your network blocks `1.1.1.1`), it falls back to other endpoints the application already contacts (the GitHub API and the Project NOMAD API) and considers the connection online if any of them respond.
 
-You can override the endpoint used for this check in two ways. The connectivity test URL can be configured from the UI under **Settings â†’ Advanced** (stored locally on your instance), or you can set the `INTERNET_STATUS_TEST_URL` environment variable. When set, the environment variable always takes precedence over the UI-configured value. If neither is set, the built-in defaults above are used.
+You can override the endpoint used for this check in two ways. The connectivity test URL can be configured from the UI under **Settings ê¢â â Advanced** (stored locally on your instance), or you can set the `INTERNET_STATUS_TEST_URL` environment variable. When set, the environment variable always takes precedence over the UI-configured value. If neither is set, the built-in defaults above are used.
 
 ## About Security
-By design, Project NOMAD is intended to be open and available without hurdles â€” it includes no authentication. If you decide to connect your device to a local network after install (e.g. for allowing other devices to access its resources), you can block/open ports to control which services are exposed.
+By design, Project NOMAD is intended to be open and available without hurdles ê¢â¬â it includes no authentication. If you decide to connect your device to a local network after install (e.g. for allowing other devices to access its resources), you can block/open ports to control which services are exposed.
 
 **Will authentication be added in the future?** Maybe. It's not currently a priority, but if there's enough demand for it, we may consider building in an optional authentication layer in a future release to support use cases where multiple users need access to the same instance but with different permission levels (e.g. family use with parental controls, classroom use with teacher/admin accounts, etc.). We have a suggestion for this on our public roadmap, so if this is something you'd like to see, please upvote it here: https://roadmap.projectnomad.us/posts/1/user-authentication-please-build-in-user-auth-with-admin-user-roles
 
@@ -147,8 +147,8 @@ The Command Center can automatically install **minor/patch** updates of itself d
 Because exercising this logic with real version bumps is impractical, an Ace command runs the **entire decision pipeline without ever triggering an update**. Run it from the `admin/` directory:
 
 ```bash
-# 1) Deterministic scenario suite â€” no network, DB, or Docker required.
-#    Proves every branch (major-only, cool-off, prerelease/draft, window wrap, â€¦)
+# 1) Deterministic scenario suite ê¢â¬â no network, DB, or Docker required.
+#    Proves every branch (major-only, cool-off, prerelease/draft, window wrap, ê¢â¬Â¦)
 #    and exits non-zero on failure, so it's safe to wire into CI.
 node ace auto-update:dry-run --scenarios
 
@@ -162,7 +162,7 @@ node ace auto-update:dry-run --current=1.32.0 --force-enabled \
   --window-start=20:00 --window-end=23:00 --cooloff=72 --skip-preflight
 ```
 
-It prints the resolved decision â€” current version, whether the clock is inside the window, the eligible target (if any), and pre-flight blockers â€” ending in a clear verdict such as `WOULD UPDATE â†’ v1.33.2` or `WOULD NOT UPDATE (outside-window): â€¦`. **No real update is ever requested.**
+It prints the resolved decision ê¢â¬â current version, whether the clock is inside the window, the eligible target (if any), and pre-flight blockers ê¢â¬â ending in a clear verdict such as `WOULD UPDATE ê¢â â v1.33.2` or `WOULD NOT UPDATE (outside-window): ê¢â¬Â¦`. **No real update is ever requested.**
 
 | Flag | Description |
 |------|-------------|
@@ -216,4 +216,4 @@ curl -fsSL https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/r
 
 ---
 
-Projeto adaptado da comunidade INEMA TDS - Marca Arckhe
+Projeto  - ARCKHÉe
