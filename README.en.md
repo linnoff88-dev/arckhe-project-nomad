@@ -1,10 +1,10 @@
-# Project NOMAD (INEMA fork)
+# Project NOMAD (ARCKHÉ fork)
 
-[![Project NOMAD: the world's knowledge stays with you](guia/assets/banner-en.jpg)](https://inematds.github.io/project-nomad/guia/en/)
+[![Project NOMAD: the world's knowledge stays with you](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/en/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
-> INEMA fork of [Project NOMAD](https://github.com/Crosstalk-Solutions/project-nomad) by Crosstalk Solutions (Apache 2.0). The code is unchanged; the Portuguese/English/Spanish guide lives in `guia/`. The full original README (in English) is [README.md](README.md).
+> ARCKHÉ fork of [Project NOMAD](https://github.com/Crosstalk-Solutions/project-nomad) by Crosstalk Solutions (Apache 2.0). The code is unchanged; the Portuguese/English/Spanish guide lives in `guia/`. The full original README (in English) is [README.md](README.md).
 
 ## What it is
 
@@ -12,7 +12,7 @@ What if the internet goes down, or you are somewhere it never reaches? Project N
 
 ## 📖 Usage guide
 
-Full guide (summary + step by step): **https://inematds.github.io/project-nomad/guia/en/**
+Full guide (summary + step by step): **https://linnoff88-dev.github.io/arckhe-/guia/en/**
 
 🎬 Video: coming soon.
 

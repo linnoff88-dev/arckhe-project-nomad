@@ -10,11 +10,11 @@
 
 </div>
 
-[![Project NOMAD: o conhecimento do mundo continua com vocêÂª](guia/assets/banner.jpg)](https://inematds.github.io/project-nomad/guia/)
+[![Project NOMAD: o conhecimento do mundo continua com vocêÂª](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/)
 
 **ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
-> Fork da INEMA do [Project NOMAD](https://github.com/Crosstalk-Solutions/project-nomad), da Crosstalk Solutions (Apache 2.0). O cêÂ³digo nêÂ£o foi alterado; o guia em portuguêÂªs/inglêÂªs/espanhol estêÂ¡ em `guia/`. O README original, em inglêÂªs, continua logo abaixo.
+> Fork da ARCKHÉ do [Project NOMAD](https://github.com/Crosstalk-Solutions/project-nomad), da Crosstalk Solutions (Apache 2.0). O cêÂ³digo nêÂ£o foi alterado; o guia em portuguêÂªs/inglêÂªs/espanhol estêÂ¡ em `guia/`. O README original, em inglêÂªs, continua logo abaixo.
 
 ## O que êÂ©
 
@@ -22,7 +22,7 @@ E se a internet cair, ou vocêÂª estiver onde ela nêÂ£o chega? O Projec
 
 ## ê°Å¸ââ Guia de uso
 
-Guia completo (resumo + passo a passo): **https://inematds.github.io/project-nomad/guia/**
+Guia completo (resumo + passo a passo): **https://linnoff88-dev.github.io/arckhe-/guia/**
 
 ê°Å¸Å½Â¬ VêÂ­deo: em breve.
 
